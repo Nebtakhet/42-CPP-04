@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 17:27:53 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/01/16 17:38:44 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/01/26 19:02:46 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 WrongCat::WrongCat()
 {
-	this->type = "WrongCat";
+	type = "WrongCat";
 	std::cout << "WrongCat constructor called" << std::endl;
 }
 
@@ -32,7 +32,7 @@ WrongCat::WrongCat(const WrongCat &other) : WrongAnimal(other)
 WrongCat &WrongCat::operator=(const WrongCat &other)
 {
 	if (this != &other)
-		this->type = other.type;
+		type = other.type;
 	std::cout << "WrongCat assignation operator called" << std::endl;
 	return (*this);		
 }

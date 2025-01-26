@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 17:04:53 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/01/16 17:38:24 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/01/26 19:03:13 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Dog::Dog() : Animal()
 {
-	this->type = "Dog";
+	type = "Dog";
 	std::cout << "Dog constructor called" << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 17:29:42 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/01/16 17:42:28 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/01/26 19:19:49 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,27 +18,31 @@
 
 int	main()
 {
+	std::cout << "Now testing Animal, Dog and Cat\n" << std::endl;
+	
     const Animal *meta = new Animal();
-    const Animal *j = new Dog();
-    const Animal *i = new Cat();
+    const Animal *i = new Dog();
+    const Animal *j = new Cat();
 
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
+    std::cout << "Animal type: " << i->getType() << std::endl;
+    std::cout << "Animal type: " << j->getType() << std::endl;
 
     i->makeSound();
     j->makeSound();
     meta->makeSound();
 
-    delete meta;
-    delete j;
-    delete i;
+	std::cout << std::endl;
 
-    std::cout << "\nNow testing WrongAnimal and WrongCat\n";
+    delete meta;
+    delete i;
+    delete j;
+
+    std::cout << "\nNow testing WrongAnimal and WrongCat\n" << std::endl;
 
     const WrongAnimal *wrongMeta = new WrongAnimal();
     const WrongAnimal *wrongCat = new WrongCat();
 
-    std::cout << wrongCat->getType() << " " << std::endl;
+    std::cout << "Animal type: " << wrongCat->getType() << std::endl;
     wrongCat->makeSound();
     wrongMeta->makeSound();
 
