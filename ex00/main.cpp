@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 17:29:42 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/01/26 19:19:49 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/02/11 15:08:24 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,13 @@ int	main()
     const Animal *i = new Dog();
     const Animal *j = new Cat();
 
+	std::cout << "Animal type: " << meta->getType() << std::endl;
     std::cout << "Animal type: " << i->getType() << std::endl;
     std::cout << "Animal type: " << j->getType() << std::endl;
 
+	meta->makeSound();
     i->makeSound();
     j->makeSound();
-    meta->makeSound();
 
 	std::cout << std::endl;
 
@@ -43,6 +44,8 @@ int	main()
     const WrongAnimal *wrongCat = new WrongCat();
 
     std::cout << "Animal type: " << wrongCat->getType() << std::endl;
+	std::cout << "Animal type: " << wrongMeta->getType() << std::endl;
+	
     wrongCat->makeSound();
     wrongMeta->makeSound();
 
