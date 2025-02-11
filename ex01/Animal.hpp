@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 16:57:13 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/01/16 17:00:14 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/02/11 13:54:05 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ class Animal
 		Animal(const Animal &other);
 		Animal &operator=(const Animal &other);
 
-		virtual void makeSound() const;
-		std::string getType() const;
+		virtual void	makeSound() const;
+		virtual 		std::string getType() const;
 };
 
 #endif

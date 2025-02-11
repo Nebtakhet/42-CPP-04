@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 17:06:58 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/01/17 14:30:53 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/01/26 19:33:57 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Cat : public Animal
 {
 	public:
 		Cat();
-		virtual ~Cat();
+		~Cat();
 		Cat(const Cat &other);
 		Cat &operator=(const Cat &other);
 

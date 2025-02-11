@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 18:21:51 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/01/17 15:09:12 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/01/26 19:30:24 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ Brain::Brain()
 
 Brain::Brain(const Brain &other)
 {
-	*this = other;
+	for (int i = 0; i < 100; i++)
+		ideas[i] = other.ideas[i];
 	std::cout << "Brain copy constructor called" << std::endl;
 }
 
@@ -41,7 +42,7 @@ Brain &Brain::operator=(const Brain &other)
 
 void Brain::setIdea(int index, const std::string &idea)
 {
-	this->ideas[index] = idea;
+	ideas[index] = idea;
 }
 
 std::string Brain::getIdea(int index) const
