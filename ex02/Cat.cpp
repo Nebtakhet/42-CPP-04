@@ -6,30 +6,34 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 17:07:41 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/01/17 14:31:17 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/02/11 14:56:45 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
+/* Constructor */
 Cat::Cat() : brain(new Brain())
 {
-	this->type = "Cat";
+	type = "Cat";
 	std::cout << "Cat constructor called" << std::endl;
 }
 
+/* Destructor */
 Cat::~Cat()
 {
 	delete this->brain;
 	std::cout << "Cat destructor called" << std::endl;
 }
 
+/* Copy constructor */
 Cat::Cat(const Cat &other) : Animal(other), brain(new Brain(*other.brain))
 {
 	*this = other;
 	std::cout << "Cat copy constructor called" << std::endl;
 }
 
+/* Assignation operator */
 Cat &Cat::operator=(const Cat &other)
 {
 	if (this != &other)
@@ -41,7 +45,8 @@ Cat &Cat::operator=(const Cat &other)
 	return (*this);		
 }
 
+/* Member function to make the sound */
 void Cat::makeSound() const
 {
-	std::cout << "Cat: Miau! Miau! Miau!" << std::endl;
+	std::cout << "Miau! Miau! Miau!" << std::endl;
 }
