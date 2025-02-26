@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 17:04:53 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/02/11 14:57:17 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/02/26 16:29:53 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ Dog::~Dog()
 /* Copy constructor */
 Dog::Dog(const Dog &other) : Animal(other), brain(new Brain(*other.brain))
 {
-	*this = other;
 	std::cout << "Dog copy constructor called" << std::endl;
 }
 
